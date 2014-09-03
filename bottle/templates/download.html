@@ -1,0 +1,8 @@
+<a id="downloadLink" href="https://download3.vmware.com/software/view/viewclients/{{ filename }}">{{ filename }}</a>.
+
+<script> 
+  var downloadTimeout = setTimeout(
+    function() {
+      window.location = document.getElementById('downloadLink').href;
+    }, 5000);
+</script>
