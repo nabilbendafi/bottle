@@ -38,8 +38,6 @@ def get():
 
     if is64bits(request.get_header('User-Agent')):
         template_values['filename'] = 'VMware-Horizon-View-Client-x86_64-3.0.0-1887158.exe'
-    else:
-        template_values['filename'] = 'VMware-Horizon-View-Client-x86-3.0.0-1887158.exe'
 
     template = JINJA_ENVIRONMENT.get_template('download.html')
 
