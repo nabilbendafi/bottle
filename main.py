@@ -15,7 +15,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(loader=jinja2.FileSystemLoader(templates_
                                        extensions=['jinja2.ext.autoescape'],
                                        autoescape=True)
 
-app = Bottle()
+bottle = Bottle()
 
 def is64bits(user_agent=''):
     """Check whether the platform is 64-bits.
@@ -31,7 +31,7 @@ def is64bits(user_agent=''):
         return True
     return False
 
-@app.route('/')
+@bottle.route('/')
 def get():
 
     template_values = {'filename' : 'VMware-Horizon-View-Client-x86-3.0.0-1887158.exe'}
